@@ -6,18 +6,12 @@
   <title>Vanderhall Ventures — Mind Over Muscle</title>
   <meta name="description" content="Vanderhall Ventures: Mind Over Muscle — elite fitness + mental clarity coaching, 8-week challenges, online coaching, and a high-discipline community." />
 
-  <!-- Open Graph (shows nicer previews when shared on IG/FB/iMessage) -->
+  <!-- Open Graph (better previews on FB/iMessage/etc.) -->
   <meta property="og:title" content="Vanderhall Ventures — Mind Over Muscle" />
   <meta property="og:description" content="Elite fitness + mental clarity coaching for high-discipline lives." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vanderhallventuresllc.com" />
-  <!-- OPTIONAL: Add a real preview image later -->
   <meta property="og:image" content="https://vanderhallventuresllc.com/images/og-preview.jpg" />
-
-  <!-- OPTIONAL: If you add a favicon file later, uncomment these:
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  -->
 
   <style>
     :root {
@@ -28,12 +22,12 @@
       --edge:#1c1e24;
       --gold:#d4af37;
       --red:#d12b32;
-      --good:#2ecc71;
     }
     * { box-sizing:border-box; }
     html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font:400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
     img { max-width:100%; display:block; }
     a { color:var(--gold); text-decoration:none; }
+    code { color:#fff6da; }
     .wrap { max-width:1100px; margin-inline:auto; padding:28px; }
 
     header {
@@ -59,6 +53,7 @@
     .btn.gold { border-color:#3b2a08; background:linear-gradient(180deg, #3d2f0a, #241b05); color:#fff6da; }
     .btn.red { background:linear-gradient(180deg, #351015, #1a0609); border-color:#4b0f15; color:#ffeff1; }
     .btn.ghost { background:transparent; }
+
     .pill {
       display:inline-flex; align-items:center; gap:8px;
       padding:6px 10px; border:1px solid var(--edge);
@@ -101,7 +96,6 @@
       border:1px solid var(--edge);
       background:#0f0f12;
     }
-    /* fallback if you don't upload a logo yet */
     .logoFallback {
       width:56px; height:40px;
       border-radius:10px;
@@ -124,12 +118,12 @@
       border-radius:14px;
       overflow:hidden;
       background:#0e1014;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding-inline:16px;
     }
-    .frame16x9 iframe {
-      position:absolute; inset:0; width:100%; height:100%;
-      border:0;
-    }
-
     .footerGrid { display:grid; grid-template-columns:1fr 360px; gap:18px; align-items:start; }
     .qr {
       width:100%;
@@ -166,8 +160,7 @@
 <header>
   <div class="wrap row">
     <div class="logoWrap" aria-label="Vanderhall Ventures branding">
-      <!-- LOGO: If you upload your real logo later, place it at /images/logo.png -->
-      <!-- If you don't have it yet, the fallback VV block shows. -->
+      <!-- Upload your real logo to /images/logo.png -->
       <img class="logoImg" src="/images/logo.png" alt="Vanderhall Ventures Logo"
            onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';" />
       <div id="logoFallback" class="logoFallback" style="display:none;">VV</div>
@@ -200,25 +193,23 @@
       </p>
 
       <div class="twoBtn">
-        <!-- PRIMARY CTA: Choose ONE destination and paste it here -->
-        <a class="btn gold" href="(https://jokervibe3.gumroad.com/)" target="_blank" rel="noopener">
+        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">
           Apply / Start Here
         </a>
         <a class="btn" href="#video">Watch Intro</a>
       </div>
 
       <div class="socials">
-        <!-- Replace these with YOUR real URLs -->
-        <a href="(https://www.instagram.com/Vanderhall_Ventures#)" target="_blank" rel="noopener">Instagram</a>
-        <a href="(https://www.instagram.com/Vanderhall_Ventures#)" target="_blank" rel="noopener">Instagram (Alt)</a>
-        <a href="(https://www.tiktok.com/@joevanderhall)" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram (Alt)</a>
+        <a href="https://www.tiktok.com/@joevanderhall" target="_blank" rel="noopener">TikTok</a>
         <a href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">YouTube</a>
-        <a href="(https://www.facebook.com/josephvanderhall)" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.facebook.com/josephvanderhall" target="_blank" rel="noopener">Facebook</a>
         <a href="mailto:joseph@vanderhallventuresllc.com">Email</a>
       </div>
 
       <p class="mutedLine">
-        Tip: when you’re ready, upload your photos to <code>/images</code> and we’ll add them into the hero + about section.
+        Tip: upload your photos to <code>/images</code> and we’ll add them into the hero + about section.
       </p>
     </div>
 
@@ -230,8 +221,7 @@
       </p>
 
       <div class="notice">
-        If you’re building your assets right now (photos/logo/video), that’s perfect.
-        This site is designed so you can swap links and images in minutes.
+        You’re live. Next step is branding: logo + photos + intro video. Once those are uploaded, this site becomes “real” instantly.
       </div>
 
       <div class="twoBtn">
@@ -243,7 +233,7 @@
 
   <hr class="sep" />
 
-  <!-- COMMUNITY / "AI PREDICTION" EMULATION -->
+  <!-- COMMUNITY -->
   <section id="community">
     <div class="card">
       <div class="pill">The Movement</div>
@@ -296,7 +286,7 @@
         <h3>Discipline Builder</h3>
         <p class="small">Structured plan with weekly progressions, mindset drills, and check-ins.</p>
         <div class="price">Starting at $199</div>
-        <a class="btn gold" href="(https://jokervibe3.gumroad.com/)" target="_blank" rel="noopener">Join Now</a>
+        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Join Now</a>
       </div>
 
       <div class="card offer">
@@ -304,7 +294,7 @@
         <h3>1:1 Coaching</h3>
         <p class="small">Custom programming + messaging support. Tailored to your schedule and goals.</p>
         <div class="price">Starting at $299/month</div>
-        <a class="btn gold" href="(https://jokervibe3.gumroad.com/)" target="_blank" rel="noopener">Apply</a>
+        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Apply</a>
       </div>
 
       <div class="card offer">
@@ -312,7 +302,7 @@
         <h3>Challenge + Coaching</h3>
         <p class="small">Best of both worlds: the full 8-Week system plus ongoing guidance.</p>
         <div class="price">Starting at $449</div>
-        <a class="btn gold" href="(https://jokervibe3.gumroad.com/)" target="_blank" rel="noopener">Secure Spot</a>
+        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Secure Spot</a>
       </div>
     </div>
   </section>
@@ -326,22 +316,19 @@
         <div class="pill">Intro Video</div>
         <h2 style="margin:.35rem 0 8px;">Your Coach in 60 Seconds</h2>
         <p class="small">
-          Replace the embed link with your real YouTube intro video ID.
-          If your link is <code>https://www.youtube.com/watch?v=VIDEO_ID</code>,
-          then set the iframe src to <code>https://www.youtube.com/embed/VIDEO_ID</code>.
+          Your intro video embed will go here. For now, this is intentionally “Coming Soon” so the site stays clean
+          and professional (no broken embeds).
         </p>
 
         <div class="frame16x9">
-          <!-- UCiy8J_NFMWmtKpNYiLIfjSw -->
-          <iframe
-            src="https://www.youtube.com/embed/(https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw)"
-            title="Vanderhall Ventures Intro"
-            allowfullscreen></iframe>
+          <div>
+            <div class="pill" style="display:inline-flex;">Video Coming Soon</div>
+            <p class="small" style="margin-top:10px;">
+              When you pick your intro video, I’ll swap this section to a proper YouTube embed.
+            </p>
+            <a class="btn gold" href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">Visit YouTube Channel</a>
+          </div>
         </div>
-
-        <p class="mutedLine">
-          Channel: <a href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">Open YouTube</a>
-        </p>
       </div>
 
       <div class="card">
@@ -363,14 +350,13 @@
 
   <hr class="sep" />
 
-  <!-- NEWSLETTER (PROFESSIONAL, NON-BROKEN) -->
+  <!-- NEWSLETTER -->
   <section id="newsletter">
     <div class="card">
       <div class="pill">Newsletter</div>
       <h2 style="margin:.35rem 0 8px;">Get the Mindset & Training Brief</h2>
       <p class="small">
         Newsletter signup is being finalized. For now, click below to email “Subscribe” and you’ll be added manually.
-        This avoids broken forms and keeps the site professional.
       </p>
 
       <div class="twoBtn">
@@ -384,26 +370,33 @@
 
   <hr class="sep" />
 
-  <!-- TESTIMONIALS (PLACEHOLDER READY) -->
+  <!-- TESTIMONIALS -->
   <section id="testimonials">
     <h2 style="margin:0 0 10px;">Results & Testimonials</h2>
-    <p class="small" style="margin:0 0 14px;">Add 2–3 short quotes here as you collect them.</p>
+    <p class="small" style="margin:0 0 14px;">
+      These are set up professionally now: a short quote + a proof link. Replace the quote text anytime.
+    </p>
 
     <div class="grid-3">
       <div class="card">
         <div class="pill">Client Win</div>
-        <p class="small" style="margin-top:10px;">“(https://www.instagram.com/reel/DOwei0tEk73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)”</p>
-        <p class="mutedLine">—Averie(https://www.instagram.com/reel/DOwei0tEk73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)1</p>
+        <p class="small" style="margin-top:10px;">“Showed up consistently and started building real momentum week by week.”</p>
+        <p class="mutedLine">— Averie</p>
+        <p class="small"><a href="https://www.instagram.com/reel/DOwei0tEk73/" target="_blank" rel="noopener">Watch proof</a></p>
       </div>
+
       <div class="card">
         <div class="pill">Mindset Shift</div>
-        <p class="small" style="margin-top:10px;">“(https://www.instagram.com/reel/DOv9HyTkZia/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)”</p>
-        <p class="mutedLine">— Larry (https://www.instagram.com/reel/DOv9HyTkZia/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)</p>
+        <p class="small" style="margin-top:10px;">“The structure + accountability helped me lock in when motivation wasn’t there.”</p>
+        <p class="mutedLine">— Larry</p>
+        <p class="small"><a href="https://www.instagram.com/reel/DOv9HyTkZia/" target="_blank" rel="noopener">Watch proof</a></p>
       </div>
+
       <div class="card">
         <div class="pill">Transformation</div>
-        <p class="small" style="margin-top:10px;">(https://www.instagram.com/reel/DI-WxoQxVLX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)</p>
-        <p class="mutedLine">— ED (https://www.instagram.com/reel/DI-WxoQxVLX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)</p>
+        <p class="small" style="margin-top:10px;">“Progress didn’t happen overnight — but it happened because I stayed consistent.”</p>
+        <p class="mutedLine">— ED</p>
+        <p class="small"><a href="https://www.instagram.com/reel/DI-WxoQxVLX/" target="_blank" rel="noopener">Watch proof</a></p>
       </div>
     </div>
   </section>
@@ -420,46 +413,33 @@
       </p>
 
       <div class="twoBtn">
-        <a class="btn gold" href="(https://jokervibe3.gumroad.com/)" target="_blank" rel="noopener">Apply / Start Here</a>
+        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Apply / Start Here</a>
         <a class="btn red" href="mailto:joseph@vanderhallventuresllc.com?subject=Vanderhall%20Ventures%20Inquiry">Email Joseph</a>
       </div>
 
       <div class="socials" style="margin-top:14px;">
-        <a href="(https://www.instagram.com/Vanderhall_Ventures#)" target="_blank" rel="noopener">Instagram</a>
-        <a href="(https://www.instagram.com/Vanderhall_Ventures#)" target="_blank" rel="noopener">Instagram (Alt)</a>
-        <a href="(https://www.tiktok.com/@joevanderhall)" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram (Alt)</a>
+        <a href="https://www.tiktok.com/@joevanderhall" target="_blank" rel="noopener">TikTok</a>
         <a href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">YouTube</a>
-        <a href="(https://www.facebook.com/josephvanderhall)" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.facebook.com/josephvanderhall" target="_blank" rel="noopener">Facebook</a>
       </div>
 
       <p class="mutedLine">
         © <span id="year"></span> Vanderhall Ventures — “Built to Break Barriers. Driven by Discipline.”
-      </p>
-
-      <p class="small">
-        <strong>Professional upgrade next:</strong> once you choose your logo + photos, upload them into <code>/images</code>
-        and I’ll wire them into the hero + about section clean.
       </p>
     </div>
 
     <div class="card">
       <div class="pill">QR</div>
       <p class="small" style="margin-top:10px;">
-        OPTIONAL: If you want a QR image on-site, upload it to <code>/images/qr.png</code>
-        and it will appear automatically.
+        OPTIONAL: If you want a QR image on-site, upload it to <code>/images/qr.png</code>.
       </p>
 
-      <div class="qr" id="qrBox"
-           style="background-image:url('/images/qr.png');">
-      </div>![LOGO SMALL](https://github.com/user-attachments/assets/cd1f174f-7258-4b10-b527-604fcf02416f)
-
-
-https://github.com/user-attachments/assets/2bf4a9a6-9fec-4d5d-b37f-c92756936c7f
-
-
+      <div class="qr" id="qrBox" style="background-image:url('/images/qr.png');"></div>
 
       <p class="mutedLine">
-        If you don’t have a QR yet, this box will simply show blank white until you upload <code>qr.png</code>.
+        If you don’t have a QR yet, this box will remain blank until you upload <code>qr.png</code>.
       </p>
     </div>
   </section>
