@@ -3,452 +3,788 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vanderhall Ventures — Mind Over Muscle</title>
-  <meta name="description" content="Vanderhall Ventures: Mind Over Muscle — elite fitness + mental clarity coaching, 8-week challenges, online coaching, and a high-discipline community." />
+  <title>Vanderhall Ventures LLC | Mental Edge Platform | Mind Over Muscle 8-Week Program</title>
+  <meta name="description" content="Vanderhall Ventures LLC — disciplined mental + physical performance. Mental Edge platform hosting the Mind Over Muscle 8-week program." />
 
-  <!-- Open Graph (better previews on FB/iMessage/etc.) -->
-  <meta property="og:title" content="Vanderhall Ventures — Mind Over Muscle" />
-  <meta property="og:description" content="Elite fitness + mental clarity coaching for high-discipline lives." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vanderhall Ventures LLC — Mental Edge | Mind Over Muscle" />
+  <meta property="og:description" content="Mental Edge is the platform. Mind Over Muscle is the 8-week program inside it." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vanderhallventuresllc.com" />
-  <meta property="og:image" content="https://vanderhallventuresllc.com/images/og-preview.jpg" />
 
   <style>
-    :root {
-      --bg:#0a0a0b;
-      --card:#121316;
-      --ink:#f5f6f8;
-      --muted:#a7aab3;
-      --edge:#1c1e24;
+    :root{
+      --bg:#07070b;
+      --panel:#0f0f16;
+      --panel2:#12121b;
+      --text:#f6f6f7;
+      --muted:#b8b8c3;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
+      --red:#c1121f;
       --gold:#d4af37;
-      --red:#d12b32;
-    }
-    * { box-sizing:border-box; }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font:400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
-    img { max-width:100%; display:block; }
-    a { color:var(--gold); text-decoration:none; }
-    code { color:#fff6da; }
-    .wrap { max-width:1100px; margin-inline:auto; padding:28px; }
+      --ok:#38b000;
+      --warn:#ffb703;
 
-    header {
-      position:sticky; top:0; z-index:10;
-      backdrop-filter:saturate(140%) blur(6px);
-      background:linear-gradient(180deg, rgba(0,0,0,.92), rgba(0,0,0,.45));
-      border-bottom:1px solid var(--edge);
-    }
-    header .row { display:flex; align-items:center; gap:14px; }
-    .brand { font-weight:900; letter-spacing:.4px; }
-    .tag { color:var(--muted); font-size:.9rem; }
-
-    .cta { margin-left:auto; display:flex; gap:10px; flex-wrap:wrap; }
-    .btn {
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 18px; border-radius:12px;
-      border:1px solid var(--edge);
-      background:linear-gradient(180deg, #1c1d22, #111318);
-      color:var(--ink); cursor:pointer; font-weight:800;
-      transition:transform .08s ease, filter .15s ease;
-    }
-    .btn:hover { transform:translateY(-1px); filter:brightness(1.05); }
-    .btn.gold { border-color:#3b2a08; background:linear-gradient(180deg, #3d2f0a, #241b05); color:#fff6da; }
-    .btn.red { background:linear-gradient(180deg, #351015, #1a0609); border-color:#4b0f15; color:#ffeff1; }
-    .btn.ghost { background:transparent; }
-
-    .pill {
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border:1px solid var(--edge);
-      border-radius:999px; font-size:.82rem; color:var(--muted);
+      --max: 1100px;
+      --radius: 18px;
+      --radius2: 26px;
     }
 
-    .hero { display:grid; grid-template-columns:1.2fr .8fr; gap:30px; align-items:center; padding:48px 0 12px; }
-    .kicker { letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:800; font-size:.8rem; }
-    .hero h1 { font-size:clamp(2.1rem, 3.8vw, 3.25rem); line-height:1.12; margin:0 0 10px; }
-    .small { font-size:.95rem; color:var(--muted); }
-
-    .card {
-      background:var(--card);
-      border:1px solid var(--edge);
-      border-radius:18px;
-      padding:20px;
-    }
-    .hero .card {
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
       background:
-        radial-gradient(80% 120% at 0% 0%, rgba(209,43,50,.18), transparent 60%),
-        radial-gradient(90% 130% at 100% 100%, rgba(212,175,55,.17), transparent 60%),
-        var(--card);
+        radial-gradient(900px 400px at 50% -5%, rgba(212,175,55,.15), transparent 60%),
+        radial-gradient(900px 450px at 5% 10%, rgba(193,18,31,.18), transparent 55%),
+        radial-gradient(900px 450px at 95% 25%, rgba(193,18,31,.10), transparent 55%),
+        var(--bg);
+      line-height:1.45;
+      overflow-x:hidden;
     }
 
-    .grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px 70px}
 
-    hr.sep { border:none; border-top:1px solid var(--edge); margin:28px 0; }
-
-    ul.clean { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-    .highlight li::before { content:'▹'; margin-right:8px; color:var(--gold); }
-
-    .socials { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
-    .socials a { border:1px solid var(--edge); padding:8px 12px; border-radius:999px; color:var(--ink); }
-
-    .logoWrap { display:flex; align-items:center; gap:12px; }
-    .logoImg {
-      width:56px; height:40px; object-fit:contain;
-      border-radius:10px;
-      border:1px solid var(--edge);
-      background:#0f0f12;
+    /* Top bar */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(12,12,18,.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 35px rgba(0,0,0,.35);
+      position: sticky;
+      top: 12px;
+      z-index: 50;
     }
-    .logoFallback {
-      width:56px; height:40px;
-      border-radius:10px;
-      border:1px solid var(--edge);
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width: 220px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius: 10px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.14);
       background:
-        linear-gradient(135deg, rgba(212,175,55,.35), rgba(209,43,50,.25)),
-        #0f0f12;
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900; color:#fff6da;
+        linear-gradient(180deg, rgba(212,175,55,.18), rgba(0,0,0,0)),
+        linear-gradient(90deg, rgba(193,18,31,.16), rgba(0,0,0,0));
+    }
+    .logo span{
+      font-weight:900;
       letter-spacing:.08em;
+      font-size:12px;
+      color: var(--gold);
+    }
+    .brand .txt{display:flex; flex-direction:column; line-height:1.1}
+    .brand .txt strong{font-size:13px; letter-spacing:.16em}
+    .brand .txt small{color:var(--muted); font-size:11px}
+
+    .nav{
+      display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{
+      border-color: rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
     }
 
-    .offer h3 { margin:.2rem 0; }
-    .price { font-weight:900; font-size:1.25rem; color:var(--gold); margin-top:6px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.02em;
+      cursor:pointer;
+      transition: transform .08s ease, opacity .12s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background: linear-gradient(90deg, var(--red), #7a0b12);
+      border-color: rgba(255,255,255,.08);
+      box-shadow: 0 18px 40px rgba(193,18,31,.20);
+    }
+    .btn.gold{
+      background: linear-gradient(90deg, rgba(212,175,55,.95), rgba(212,175,55,.55));
+      color:#1a1200;
+      border-color: rgba(212,175,55,.25);
+      box-shadow: 0 18px 40px rgba(212,175,55,.15);
+    }
+    .btn.ghost{
+      background: transparent;
+      color: var(--text);
+    }
+    .btn.small{padding:10px 12px; border-radius: 12px; font-size:13px}
 
-    .frame16x9 {
-      position:relative;
-      padding-top:56.25%;
-      border:1px solid var(--edge);
-      border-radius:14px;
+    /* Hero */
+    .hero{
+      margin-top: 22px;
+      padding: 28px 18px 18px;
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      background: rgba(10,10,14,.72);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
       overflow:hidden;
-      background:#0e1014;
-      display:flex;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(650px 180px at 50% 0%, rgba(212,175,55,.18), transparent 60%),
+        radial-gradient(700px 220px at 20% 10%, rgba(193,18,31,.20), transparent 55%),
+        radial-gradient(700px 220px at 80% 18%, rgba(193,18,31,.12), transparent 55%);
+      pointer-events:none;
+      opacity:.85;
+    }
+    .heroInner{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 920px){
+      .heroInner{grid-template-columns: 1fr}
+      .brand{min-width:unset}
+      .topbar{position:sticky}
+    }
+
+    .kicker{
+      display:inline-flex;
+      gap:10px;
       align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding-inline:16px;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      background: rgba(255,255,255,.02);
+      width: fit-content;
+      margin-bottom: 14px;
     }
-    .footerGrid { display:grid; grid-template-columns:1fr 360px; gap:18px; align-items:start; }
-    .qr {
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--ok);
+      box-shadow: 0 0 0 3px rgba(56,176,0,.12);
+    }
+
+    h1{
+      margin:0 0 12px;
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: .01em;
+    }
+    @media (max-width: 520px){
+      h1{font-size: 36px}
+    }
+    .accentRed{color: var(--red)}
+    .accentGold{color: var(--gold)}
+
+    .sub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin: 12px 0 16px;
+    }
+
+    .proof{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .chip{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.02);
+    }
+    .chip b{color: var(--text)}
+    .chip .tag{
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+    }
+
+    /* Right hero card */
+    .heroCard{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius2);
+      background: rgba(18,18,28,.75);
+      box-shadow: 0 20px 65px rgba(0,0,0,.50);
+      padding: 16px;
+    }
+    .heroCard h3{margin:0 0 10px; font-size:16px}
+    .heroCard p{margin:0 0 10px; color:var(--muted); font-size:14px; line-height:1.65}
+    .list{
+      display:grid; gap:10px; margin-top: 12px;
+    }
+    .li{
+      display:flex; gap:10px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.02);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .li .ico{
+      width:34px; height:34px; border-radius: 12px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(212,175,55,.16), rgba(0,0,0,0));
+      flex: 0 0 auto;
+    }
+    .li .ico svg{width:18px; height:18px; fill: var(--gold)}
+    .li .t{display:flex; flex-direction:column; gap:2px}
+    .li .t strong{font-size:13px}
+    .li .t small{color:var(--muted); font-size:12px; line-height:1.35}
+
+    /* Sections */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px){ .grid{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 640px){ .grid{grid-template-columns: 1fr} }
+
+    .card{
+      border:1px solid rgba(255,255,255,.11);
+      background: rgba(14,14,20,.72);
+      border-radius: var(--radius2);
+      padding: 16px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+    .card h2{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted); line-height:1.7}
+    .bullets{margin:10px 0 0; padding-left: 18px; color: var(--muted); line-height:1.8}
+    .bullets li{margin:4px 0}
+    .hr{
+      height:1px; background: rgba(255,255,255,.10);
+      margin: 16px 0;
+    }
+
+    .section{
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(10,10,14,.55);
+    }
+    .section h2{margin:0 0 8px}
+    .section .sub2{margin:0 0 10px; color:var(--muted)}
+    .twoCol{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr 1fr;
+      align-items:start;
+    }
+    @media (max-width: 860px){ .twoCol{grid-template-columns: 1fr} }
+
+    /* Video placeholder */
+    .media{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.02);
+      overflow:hidden;
+      min-height: 260px;
+      position:relative;
+    }
+    .media iframe{
       width:100%;
-      aspect-ratio:1/1;
-      background:#fff;
-      border-radius:14px;
-      border:1px solid var(--edge);
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+      height: 340px;
+      border:0;
+      display:block;
+    }
+    @media (max-width: 520px){
+      .media iframe{height: 260px}
+    }
+    .mediaPlaceholder{
+      padding: 18px;
+      color: var(--muted);
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .mediaPlaceholder strong{color: var(--text)}
+    .pill{
+      display:inline-flex; width:fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    .twoBtn { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .mutedLine { color:var(--muted); font-size:.9rem; margin-top:10px; }
-
-    .notice {
-      border:1px dashed rgba(212,175,55,.35);
-      background:rgba(212,175,55,.06);
-      border-radius:14px;
-      padding:14px 16px;
-      color:#fff6da;
-      font-size:.92rem;
+    /* Testimonials */
+    .quote{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.02);
+      border-radius: var(--radius2);
+      padding: 14px;
+      color: var(--muted);
+      line-height: 1.7;
     }
+    .quote b{color:var(--text)}
+    .quote small{display:block; margin-top:10px; color:var(--muted)}
 
-    @media (max-width:880px) {
-      .hero { grid-template-columns:1fr; }
-      .grid-3 { grid-template-columns:1fr; }
-      .footerGrid { grid-template-columns:1fr; }
+    /* FAQ */
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      background: rgba(255,255,255,.02);
+      padding: 12px 12px;
+    }
+    details summary{
+      cursor:pointer;
+      font-weight:800;
+      color: var(--text);
+      outline:none;
+    }
+    details p{margin:10px 0 0; color:var(--muted)}
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      padding: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius2);
+      background: rgba(10,10,14,.55);
+      color: var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap: 12px;
+      align-items:center;
+    }
+    .footerLinks{display:flex; gap:12px; flex-wrap:wrap}
+    .footerLinks a{color:var(--muted); text-decoration:none}
+    .footerLinks a:hover{color:var(--text)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+
+    /* Toast */
+    .toast{
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(18,18,28,.92);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 20px 70px rgba(0,0,0,.55);
+      border-radius: 999px;
+      padding: 10px 12px;
+      color: var(--muted);
+      display:none;
+      gap: 10px;
+      align-items:center;
+      z-index: 80;
+      backdrop-filter: blur(8px);
+      max-width: calc(100% - 24px);
+    }
+    .toast b{color:var(--text)}
+    .toast .ok{
+      width:10px; height:10px; border-radius: 99px;
+      background: var(--ok);
+      box-shadow: 0 0 0 3px rgba(56,176,0,.14);
     }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="wrap row">
-    <div class="logoWrap" aria-label="Vanderhall Ventures branding">
-      <!-- Upload your real logo to /images/logo.png -->
-      <img class="logoImg" src="/images/logo.png" alt="Vanderhall Ventures Logo"
-           onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';" />
-      <div id="logoFallback" class="logoFallback" style="display:none;">VV</div>
+  <!-- =====================
+       CONFIG (EDIT THESE)
+  ====================== -->
+  <script>
+    window.VV_CONFIG = {
+      brandName: "Vanderhall Ventures LLC",
+      tagline: "Built to Break Barriers. Driven by Discipline.",
+      // Platform + Offer naming (your corrected structure)
+      platformName: "Mental Edge",
+      programName: "Mind Over Muscle (8-Week Program)",
 
-      <div>
-        <div class="brand">Vanderhall Ventures</div>
-        <div class="tag">Built to Break Barriers. Driven by Discipline.</div>
-      </div>
-    </div>
+      // LINKS
+      mentalEdgeAppUrl: "https://mental-edge--blacjokerv1.replit.app/",
+      gumroadCheckoutUrl: "https://jokervibe3.gumroad.com/l/jgsaj",
 
-    <div class="cta">
-      <a class="btn gold" href="#offers">Programs</a>
-      <a class="btn" href="#community">Community</a>
-      <a class="btn red" href="#contact">Contact</a>
-    </div>
-  </div>
-</header>
+      instagramUrl: "https://instagram.com/vanderhall_ventures",
+      instagramHandle: "@vanderhall_ventures",
+      email: "joseph@vanderhallventuresllc.com",
 
-<main class="wrap">
+      // Optional: Paste a YouTube embed URL like: https://www.youtube.com/embed/VIDEO_ID
+      introVideoEmbedUrl: "",
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div>
-      <div class="kicker">Mind Over Muscle</div>
-      <h1>Elite fitness + mental clarity coaching for high-discipline lives.</h1>
+      // Optional: add your logo URL if you host it somewhere (Vercel public, GitHub, etc.)
+      logoImageUrl: "",
 
-      <p class="small">
-        I’m Joseph Vanderhall — Army veteran and behavioral health specialist. This is the home of Vanderhall Ventures:
-        training, mindset, and accountability built for people who refuse to stay stuck.
-      </p>
+      // Optional: where your main domain lives later
+      mainSiteUrl: "https://vanderhallventuresllc.com"
+    };
+  </script>
 
-      <div class="twoBtn">
-        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">
-          Apply / Start Here
-        </a>
-        <a class="btn" href="#video">Watch Intro</a>
-      </div>
+  <div class="wrap">
 
-      <div class="socials">
-        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram (Alt)</a>
-        <a href="https://www.tiktok.com/@joevanderhall" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.facebook.com/josephvanderhall" target="_blank" rel="noopener">Facebook</a>
-        <a href="mailto:joseph@vanderhallventuresllc.com">Email</a>
-      </div>
-
-      <p class="mutedLine">
-        Tip: upload your photos to <code>/images</code> and we’ll add them into the hero + about section.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="pill">Quick Start</div>
-      <h3 style="margin:.4rem 0 0;">Start the Challenge</h3>
-      <p class="small">
-        Structured weekly training blocks, mindset prompts, and accountability built for consistency — not perfection.
-      </p>
-
-      <div class="notice">
-        You’re live. Next step is branding: logo + photos + intro video. Once those are uploaded, this site becomes “real” instantly.
-      </div>
-
-      <div class="twoBtn">
-        <a class="btn gold" href="#offers">See Programs</a>
-        <a class="btn ghost" href="#community">What is Mind Over Muscle?</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="sep" />
-
-  <!-- COMMUNITY -->
-  <section id="community">
-    <div class="card">
-      <div class="pill">The Movement</div>
-      <h2 style="margin:.35rem 0 8px;">Mind Over Muscle is where mental clarity meets physical power.</h2>
-      <p class="small">
-        You didn’t just stumble here — you showed up for a reason. This community is built for people who want structure,
-        discipline, and real progress. No fluff. No excuses. Just momentum.
-      </p>
-
-      <div class="grid-2" style="margin-top:14px;">
-        <div class="card" style="background:#0f1116;">
-          <div class="pill">What You’ll Get</div>
-          <ul class="clean highlight">
-            <li>High-yield workouts that fit real schedules</li>
-            <li>Mindset tools rooted in behavioral health</li>
-            <li>Accountability prompts to keep you locked in</li>
-            <li>Progression you can actually follow</li>
-          </ul>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" id="vvLogoBox" aria-label="Vanderhall Ventures logo">
+          <span>VV</span>
         </div>
+        <div class="txt">
+          <strong>VANDERHALL VENTURES</strong>
+          <small id="vvTagline">Built to Break Barriers. Driven by Discipline.</small>
+        </div>
+      </div>
 
-        <div class="card" style="background:#0f1116;">
-          <div class="pill">Conversation Starter</div>
-          <p class="small" style="margin-top:10px;">
-            What’s ONE habit you’ve been building that’s helping you level up — mentally or physically?
+      <div class="nav" aria-label="site navigation">
+        <a href="#how">How it works</a>
+        <a href="#program">Program</a>
+        <a href="#proof">Proof</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn small ghost" id="btnOpenApp" href="#">Open App</a>
+        <a class="btn small primary" id="btnJoinTop" href="#">Join Now</a>
+      </div>
+    </div>
+
+    <section class="hero" id="top">
+      <div class="heroInner">
+
+        <div>
+          <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            <span><b id="platformName">Mental Edge</b> is live — hosting <b id="programName">Mind Over Muscle</b></span>
+          </div>
+
+          <h1>
+            Operate in <span class="accentGold">Godly Mode</span>:
+            <br />
+            <span class="accentRed">Structured.</span> Disciplined. Unbreakable.
+          </h1>
+
+          <p class="sub">
+            <b id="platformName2">Mental Edge</b> is the platform.
+            <b id="programName2">Mind Over Muscle</b> is the 8-week system inside it—built to sharpen your mindset,
+            strengthen your body, and lock in discipline that holds under pressure.
           </p>
 
-          <div class="twoBtn">
-            <a class="btn gold" href="mailto:joseph@vanderhallventuresllc.com?subject=Mind%20Over%20Muscle%20Community">
-              Join the Community
-            </a>
-            <a class="btn" href="#contact">Contact Joseph</a>
+          <div class="ctaRow">
+            <a class="btn primary" id="btnJoinHero" href="#">Join Mind Over Muscle</a>
+            <a class="btn gold" id="btnOpenAppHero" href="#">Open Mental Edge</a>
+            <a class="btn ghost" href="#program">See what you get</a>
+          </div>
+
+          <div class="proof" id="proof">
+            <div class="chip"><span class="tag">8 weeks</span> <b>Weekly structure</b> + accountability</div>
+            <div class="chip"><span class="tag">mindset</span> <b>Discipline systems</b> you can repeat</div>
+            <div class="chip"><span class="tag">fitness</span> <b>Training blueprint</b> for consistency</div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <hr class="sep" />
+        <aside class="heroCard">
+          <h3>What you’re getting (clear + professional)</h3>
+          <p>
+            This is not hype. This is a system. You’ll know what to do each week,
+            how to track progress, and how to build discipline that doesn’t fold.
+          </p>
 
-  <!-- OFFERS -->
-  <section id="offers">
-    <h2 style="margin:0 0 10px;">Coaching Offers</h2>
-    <p class="small" style="margin:0 0 14px;">
-      Prices shown as “Starting at” to keep it flexible while you finalize packages.
-    </p>
+          <div class="list">
+            <div class="li">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2l4 7h-8l4-7zm-8 9h16l-8 11-8-11z"/></svg>
+              </div>
+              <div class="t">
+                <strong>8-Week Program Roadmap</strong>
+                <small>Weekly focus, actions, standards, and goals—no confusion.</small>
+              </div>
+            </div>
 
-    <div class="grid-3">
-      <div class="card offer">
-        <div class="pill">8-Week Challenge</div>
-        <h3>Discipline Builder</h3>
-        <p class="small">Structured plan with weekly progressions, mindset drills, and check-ins.</p>
-        <div class="price">Starting at $199</div>
-        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Join Now</a>
-      </div>
+            <div class="li">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h10v2H4v-2z"/></svg>
+              </div>
+              <div class="t">
+                <strong>Workouts + Mindset Protocols</strong>
+                <small>Physical training paired with mental conditioning routines.</small>
+              </div>
+            </div>
 
-      <div class="card offer">
-        <div class="pill">Online Coaching</div>
-        <h3>1:1 Coaching</h3>
-        <p class="small">Custom programming + messaging support. Tailored to your schedule and goals.</p>
-        <div class="price">Starting at $299/month</div>
-        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Apply</a>
-      </div>
-
-      <div class="card offer">
-        <div class="pill">Bundle</div>
-        <h3>Challenge + Coaching</h3>
-        <p class="small">Best of both worlds: the full 8-Week system plus ongoing guidance.</p>
-        <div class="price">Starting at $449</div>
-        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Secure Spot</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="sep" />
-
-  <!-- VIDEO -->
-  <section id="video">
-    <div class="grid-2">
-      <div class="card">
-        <div class="pill">Intro Video</div>
-        <h2 style="margin:.35rem 0 8px;">Your Coach in 60 Seconds</h2>
-        <p class="small">
-          Your intro video embed will go here. For now, this is intentionally “Coming Soon” so the site stays clean
-          and professional (no broken embeds).
-        </p>
-
-        <div class="frame16x9">
-          <div>
-            <div class="pill" style="display:inline-flex;">Video Coming Soon</div>
-            <p class="small" style="margin-top:10px;">
-              When you pick your intro video, I’ll swap this section to a proper YouTube embed.
-            </p>
-            <a class="btn gold" href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">Visit YouTube Channel</a>
+            <div class="li">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
+              </div>
+              <div class="t">
+                <strong>Tracking + Accountability</strong>
+                <small>Progress checks, reflection prompts, and weekly standards.</small>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
+          <div class="hr"></div>
+
+          <p class="mono" style="margin:0;color:var(--muted);font-size:12px;">
+            Platform: <b id="platformName3">Mental Edge</b> • Program: <b id="programName3">Mind Over Muscle</b>
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="grid" id="how">
       <div class="card">
-        <div class="pill">Why It Works</div>
-        <ul class="clean highlight" style="margin-top:10px;">
-          <li>Simple training blocks with high return</li>
-          <li>Behavior design rooted in real psychology</li>
-          <li>Clear week-to-week progression</li>
-          <li>Accountability + community momentum</li>
+        <h2>How it works</h2>
+        <p>Clear steps. No friction. Get in, execute, and track your progress.</p>
+        <ul class="bullets">
+          <li><b>Join</b> Mind Over Muscle on Gumroad.</li>
+          <li><b>Open</b> Mental Edge (the platform).</li>
+          <li><b>Follow</b> the weekly roadmap and standards.</li>
+          <li><b>Track</b> performance and reflect weekly.</li>
         </ul>
+      </div>
 
-        <div class="twoBtn">
-          <a class="btn gold" href="mailto:joseph@vanderhallventuresllc.com?subject=Coaching%20Inquiry">Message Joseph</a>
-          <a class="btn" href="#offers">View Programs</a>
+      <div class="card">
+        <h2>What we stand on</h2>
+        <p>Vanderhall Ventures operates at a higher standard—structure, discipline, and integrity.</p>
+        <ul class="bullets">
+          <li>Accountability over excuses</li>
+          <li>Consistency over intensity</li>
+          <li>Purpose-driven execution</li>
+          <li>Highest standards—always</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>What you’ll feel</h2>
+        <p>This is the shift—less chaos, more control, and visible progress.</p>
+        <ul class="bullets">
+          <li>Clear weekly plan</li>
+          <li>Better discipline under stress</li>
+          <li>Improved confidence and energy</li>
+          <li>Momentum you can maintain</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="program">
+      <h2>Mind Over Muscle — the 8-week program</h2>
+      <p class="sub2">Hosted inside <b>Mental Edge</b>. Built for structure and execution.</p>
+
+      <div class="twoCol">
+        <div class="card">
+          <h2>Program breakdown</h2>
+          <p>High-level overview (professional and clear). You can refine details weekly.</p>
+          <ul class="bullets">
+            <li><b>Weeks 1–2:</b> Foundations & discipline setup</li>
+            <li><b>Weeks 3–4:</b> Strength, structure, consistency</li>
+            <li><b>Weeks 5–6:</b> Mental conditioning + performance habits</li>
+            <li><b>Weeks 7–8:</b> Execution phase + ownership standards</li>
+          </ul>
+          <div class="hr"></div>
+          <p style="margin:0;color:var(--muted)">
+            You’re not buying motivation. You’re buying a system.
+          </p>
+        </div>
+
+        <div class="media" id="videoBox">
+          <div class="mediaPlaceholder" id="videoPlaceholder">
+            <span class="pill">Optional</span>
+            <strong>Add your intro video here</strong>
+            <div>Paste a YouTube embed URL into <span class="mono">introVideoEmbedUrl</span> in the CONFIG at the top.</div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.7">
+              Example embed format:
+              <div class="mono" style="margin-top:8px;opacity:.9">https://www.youtube.com/embed/VIDEO_ID</div>
+            </div>
+            <div class="hr"></div>
+            <a class="btn gold" id="btnJoinMid" href="#">Join Mind Over Muscle</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="sep" />
+    <section class="section" id="proof2">
+      <h2>Proof & credibility</h2>
+      <p class="sub2">Use this section to build trust without over-explaining.</p>
 
-  <!-- NEWSLETTER -->
-  <section id="newsletter">
-    <div class="card">
-      <div class="pill">Newsletter</div>
-      <h2 style="margin:.35rem 0 8px;">Get the Mindset & Training Brief</h2>
-      <p class="small">
-        Newsletter signup is being finalized. For now, click below to email “Subscribe” and you’ll be added manually.
-      </p>
-
-      <div class="twoBtn">
-        <a class="btn gold" href="mailto:joseph@vanderhallventuresllc.com?subject=Newsletter%20Signup&body=Please%20add%20me%20to%20the%20Mindset%20%26%20Training%20Brief.">
-          Subscribe via Email
-        </a>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="sep" />
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <h2 style="margin:0 0 10px;">Results & Testimonials</h2>
-    <p class="small" style="margin:0 0 14px;">
-      These are set up professionally now: a short quote + a proof link. Replace the quote text anytime.
-    </p>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="pill">Client Win</div>
-        <p class="small" style="margin-top:10px;">“Showed up consistently and started building real momentum week by week.”</p>
-        <p class="mutedLine">— Averie</p>
-        <p class="small"><a href="https://www.instagram.com/reel/DOwei0tEk73/" target="_blank" rel="noopener">Watch proof</a></p>
+      <div class="twoCol">
+        <div class="quote">
+          “I stopped relying on motivation and finally built structure I can keep.”
+          <small><b>— Client/Member Name</b> • (Add real testimonial later)</small>
+        </div>
+        <div class="quote">
+          “The weekly standards made it easy to execute. No guessing.”
+          <small><b>— Client/Member Name</b> • (Add real testimonial later)</small>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="pill">Mindset Shift</div>
-        <p class="small" style="margin-top:10px;">“The structure + accountability helped me lock in when motivation wasn’t there.”</p>
-        <p class="mutedLine">— Larry</p>
-        <p class="small"><a href="https://www.instagram.com/reel/DOv9HyTkZia/" target="_blank" rel="noopener">Watch proof</a></p>
+      <div class="hr"></div>
+
+      <div class="ctaRow">
+        <a class="btn primary" id="btnJoinBottom" href="#">Join Mind Over Muscle</a>
+        <a class="btn ghost" id="btnOpenAppBottom" href="#">Open Mental Edge</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <p class="sub2">Answer objections cleanly and keep it moving.</p>
+
+      <div class="twoCol">
+        <details>
+          <summary>What’s the difference between Mental Edge and Mind Over Muscle?</summary>
+          <p><b>Mental Edge</b> is the platform/app. <b>Mind Over Muscle</b> is the 8-week program hosted inside it.</p>
+        </details>
+
+        <details>
+          <summary>Do I get access immediately?</summary>
+          <p>Yes. After checkout, you can open Mental Edge and follow the next steps.</p>
+        </details>
+
+        <details>
+          <summary>Is this for beginners or experienced?</summary>
+          <p>It’s for anyone ready to execute with structure. The standard is the same—show up and do the work.</p>
+        </details>
+
+        <details>
+          <summary>How do I contact you?</summary>
+          <p>DM <b id="igHandle2">@vanderhall_ventures</b> or email <b id="email2">joseph@vanderhallventuresllc.com</b>.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <b id="brandName">Vanderhall Ventures LLC</b><br/>
+        <span id="tagline">Built to Break Barriers. Driven by Discipline.</span>
       </div>
 
-      <div class="card">
-        <div class="pill">Transformation</div>
-        <p class="small" style="margin-top:10px;">“Progress didn’t happen overnight — but it happened because I stayed consistent.”</p>
-        <p class="mutedLine">— ED</p>
-        <p class="small"><a href="https://www.instagram.com/reel/DI-WxoQxVLX/" target="_blank" rel="noopener">Watch proof</a></p>
+      <div class="footerLinks">
+        <a id="footerOpenApp" href="#">Open Mental Edge</a>
+        <a id="footerJoin" href="#">Join Mind Over Muscle</a>
+        <a id="footerIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+        <a id="footerEmail" href="#">Email</a>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <hr class="sep" />
+  </div>
 
-  <!-- CONTACT / FOOTER -->
-  <section id="contact" class="footerGrid">
-    <div class="card">
-      <div class="pill">Connect</div>
-      <h2 style="margin:.35rem 0 8px;">Ready to build discipline?</h2>
-      <p class="small">
-        Reach out for coaching, the 8-week challenge, or collaboration opportunities.
-      </p>
+  <div class="toast" id="toast">
+    <span class="ok" aria-hidden="true"></span>
+    <span><b>Copied:</b> link ready</span>
+  </div>
 
-      <div class="twoBtn">
-        <a class="btn gold" href="https://jokervibe3.gumroad.com/" target="_blank" rel="noopener">Apply / Start Here</a>
-        <a class="btn red" href="mailto:joseph@vanderhallventuresllc.com?subject=Vanderhall%20Ventures%20Inquiry">Email Joseph</a>
-      </div>
+  <script>
+    const C = window.VV_CONFIG;
 
-      <div class="socials" style="margin-top:14px;">
-        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.instagram.com/vanderhall_ventures/" target="_blank" rel="noopener">Instagram (Alt)</a>
-        <a href="https://www.tiktok.com/@joevanderhall" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.youtube.com/channel/UCiy8J_NFMWmtKpNYiLIfjSw" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.facebook.com/josephvanderhall" target="_blank" rel="noopener">Facebook</a>
-      </div>
+    // Inject brand copy
+    document.getElementById("vvTagline").textContent = C.tagline;
+    document.getElementById("brandName").textContent = C.brandName;
+    document.getElementById("tagline").textContent = C.tagline;
 
-      <p class="mutedLine">
-        © <span id="year"></span> Vanderhall Ventures — “Built to Break Barriers. Driven by Discipline.”
-      </p>
-    </div>
+    const setText = (id, val) => { const el=document.getElementById(id); if(el) el.textContent = val; };
+    setText("platformName", C.platformName);
+    setText("platformName2", C.platformName);
+    setText("platformName3", C.platformName);
+    setText("programName", C.programName);
+    setText("programName2", C.programName);
+    setText("programName3", C.programName);
+    setText("igHandle2", C.instagramHandle);
+    setText("email2", C.email);
 
-    <div class="card">
-      <div class="pill">QR</div>
-      <p class="small" style="margin-top:10px;">
-        OPTIONAL: If you want a QR image on-site, upload it to <code>/images/qr.png</code>.
-      </p>
+    // Logo image (optional)
+    if (C.logoImageUrl) {
+      const box = document.getElementById("vvLogoBox");
+      box.innerHTML = "";
+      const img = document.createElement("img");
+      img.src = C.logoImageUrl;
+      img.alt = "Vanderhall Ventures logo";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+      img.style.borderRadius = "10px";
+      box.appendChild(img);
+    }
 
-      <div class="qr" id="qrBox" style="background-image:url('/images/qr.png');"></div>
+    // Links
+    const joinUrl = C.gumroadCheckoutUrl;
+    const appUrl = C.mentalEdgeAppUrl;
 
-      <p class="mutedLine">
-        If you don’t have a QR yet, this box will remain blank until you upload <code>qr.png</code>.
-      </p>
-    </div>
-  </section>
+    const link = (id, href, targetBlank=false) => {
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.href = href;
+      if(targetBlank) { el.target = "_blank"; el.rel = "noreferrer"; }
+    };
 
-</main>
+    link("btnJoinTop", joinUrl, true);
+    link("btnJoinHero", joinUrl, true);
+    link("btnJoinMid", joinUrl, true);
+    link("btnJoinBottom", joinUrl, true);
+    link("footerJoin", joinUrl, true);
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    link("btnOpenApp", appUrl, true);
+    link("btnOpenAppHero", appUrl, true);
+    link("btnOpenAppBottom", appUrl, true);
+    link("footerOpenApp", appUrl, true);
 
+    link("footerIG", C.instagramUrl, true);
+
+    const email = document.getElementById("footerEmail");
+    if (email) email.href = `mailto:${C.email}`;
+
+    // Optional video embed
+    const videoBox = document.getElementById("videoBox");
+    const placeholder = document.getElementById("videoPlaceholder");
+    if (C.introVideoEmbedUrl) {
+      placeholder.remove();
+      const iframe = document.createElement("iframe");
+      iframe.src = C.introVideoEmbedUrl;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      iframe.title = "Vanderhall Ventures intro";
+      videoBox.appendChild(iframe);
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const href = a.getAttribute("href");
+        if (!href || href === "#") return;
+        const el = document.querySelector(href);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+  </script>
 </body>
 </html>
