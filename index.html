@@ -461,6 +461,9 @@
       // LINKS
       mentalEdgeAppUrl: "https://mental-edge--blacjokerv1.replit.app/",
       gumroadCheckoutUrl: "https://vanderhallventures.gumroad.com/l/jgsaj",
+      disciplineResetUrl: "https://vanderhallventures.gumroad.com/l/cdjs",
+      ebookUrl: "https://vanderhallventures.gumroad.com/l/iedkpu",
+      customBlueprintUrl: "https://vanderhallventures.gumroad.com/l/Custom-Training-Blueprint-4week",
       instagramUrl: "https://instagram.com/vanderhall_ventures",
       instagramHandle: "@vanderhall_ventures",
       email: "joseph@vanderhallventuresllc.com",
@@ -627,14 +630,14 @@
           <h3>5-Day Discipline Reset</h3>
           <div class="price">FREE</div>
           <p>Rebuild consistency, daily structure, and forward momentum through five focused days of action.</p>
-          <span class="btn ghost" aria-disabled="true">Enrollment link coming soon</span>
+          <a class="btn gold" id="btnOfferReset" href="#" data-event="discipline_reset_click">Start the Free Reset</a>
         </article>
         <article class="offerCard" id="mind-over-muscle-ebook">
           <span class="eyebrow">Step 2 · Learn</span>
           <h3>Mind Over Muscle E-book</h3>
           <div class="price">$15</div>
           <p>Learn the core mindset, discipline, and personal-responsibility principles behind the Mental Edge philosophy.</p>
-          <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
+          <a class="btn ghost" id="btnOfferEbook" href="#" data-event="ebook_click">Get the E-book</a>
         </article>
         <article class="offerCard" id="mind-over-muscle-program">
           <span class="eyebrow">Step 3 · Execute</span>
@@ -648,7 +651,7 @@
           <h3>Custom Training Blueprint</h3>
           <div class="price">$65</div>
           <p>Receive a personalized four-week plan built around your goals, schedule, equipment, experience, and limitations.</p>
-          <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
+          <a class="btn ghost" id="btnOfferBlueprint" href="#" data-event="custom_blueprint_click">Get Your Custom Blueprint</a>
         </article>
         <article class="offerCard" id="coaching-brotherhood">
           <span class="eyebrow">Step 5 · Stay accountable</span>
@@ -854,6 +857,9 @@
     // Links
     const joinUrl = C.gumroadCheckoutUrl;
     const appUrl = C.mentalEdgeAppUrl;
+    const resetUrl = C.disciplineResetUrl;
+    const ebookUrl = C.ebookUrl;
+    const blueprintUrl = C.customBlueprintUrl;
 
     const link = (id, href, targetBlank=false) => {
       const el = document.getElementById(id);
@@ -866,6 +872,10 @@
     link("btnJoinHero", joinUrl, true);
     link("btnJoinMid", joinUrl, true);
     link("btnOfferProgram", joinUrl, true);
+    link("btnStartReset", resetUrl, true);
+    link("btnOfferReset", resetUrl, true);
+    link("btnOfferEbook", ebookUrl, true);
+    link("btnOfferBlueprint", blueprintUrl, true);
     link("btnJoinBottom", joinUrl, true);
     link("footerJoin", joinUrl, true);
 
@@ -895,7 +905,7 @@
     }
 
     // Conversion events (custom-event reporting requires a supported Vercel plan)
-    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click"};
+    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnStartReset:"discipline_reset_click",btnOfferReset:"discipline_reset_click",btnOfferEbook:"ebook_click",btnOfferBlueprint:"custom_blueprint_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click"};
     Object.entries(eventMap).forEach(([id,name]) => { const el=document.getElementById(id); if(el) el.addEventListener("click",()=>window.va("event",{name})); });
     document.querySelectorAll("[data-event]").forEach(el => el.addEventListener("click",()=>window.va("event",{name:el.dataset.event})));
 
