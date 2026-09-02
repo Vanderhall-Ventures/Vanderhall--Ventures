@@ -137,15 +137,16 @@
     }
     .btn.small{padding:10px 12px; border-radius: 12px; font-size:13px}
 
-    .offerGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+    .offerGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
     .offerCard{display:flex;flex-direction:column;gap:10px;border:1px solid rgba(255,255,255,.11);background:rgba(14,14,20,.72);border-radius:var(--radius2);padding:16px}
     .offerCard h3{margin:0;font-size:18px}.offerCard p{margin:0;color:var(--muted);line-height:1.6;flex:1}
     .price{font-size:25px;font-weight:900;color:var(--gold)}
     .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
     .notice{border-left:3px solid var(--gold);padding:10px 12px;background:rgba(212,175,55,.07);color:var(--muted);border-radius:0 12px 12px 0}
     .trustStrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;color:var(--muted);font-size:13px}
-    @media (max-width:980px){.offerGrid{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.offerGrid{grid-template-columns:1fr}}
+    @media (max-width:1100px){.offerGrid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:760px){.offerGrid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.offerGrid{grid-template-columns:1fr}}
 
     /* Hero */
     .hero{
@@ -619,32 +620,48 @@
     </section>
     <section class="section" id="offers">
       <h2>Your path forward</h2>
-      <p class="sub2">Start where you are. Each step adds more structure, personalization, and accountability.</p>
+      <p class="sub2">Start where you are. Move through five clear levels of education, structure, personalization, and accountability.</p>
       <div class="offerGrid">
         <article class="offerCard" id="free-reset">
-          <span class="eyebrow">Step 1 · Start free</span><h3>5-Day Discipline Reset</h3><div class="price">FREE</div>
-          <p>A focused five-day reset designed to help you rebuild consistency, daily structure, and forward momentum.</p>
+          <span class="eyebrow">Step 1 · Reset</span>
+          <h3>5-Day Discipline Reset</h3>
+          <div class="price">FREE</div>
+          <p>Rebuild consistency, daily structure, and forward momentum through five focused days of action.</p>
           <span class="btn ghost" aria-disabled="true">Enrollment link coming soon</span>
         </article>
-        <article class="offerCard">
-          <span class="eyebrow">Step 2 · Build the system</span><h3>Mind Over Muscle</h3><div class="price">$27</div>
-          <p>An eight-week mindset and fitness system hosted inside the Mental Edge member platform.</p>
-          <a class="btn primary" id="btnOfferProgram" href="#" data-event="mind_over_muscle_click">Join Mind Over Muscle</a>
-        </article>
-        <article class="offerCard" id="custom-blueprint">
-          <span class="eyebrow">Step 3 · Personalize it</span><h3>Custom Training Blueprint</h3><div class="price">$65</div>
-          <p>A personalized four-week plan built around your goals, schedule, equipment, experience, and limitations.</p>
+        <article class="offerCard" id="mind-over-muscle-ebook">
+          <span class="eyebrow">Step 2 · Learn</span>
+          <h3>Mind Over Muscle E-book</h3>
+          <div class="price">$15</div>
+          <p>Learn the core mindset, discipline, and personal-responsibility principles behind the Mental Edge philosophy.</p>
           <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
         </article>
-        <article class="offerCard">
-          <span class="eyebrow">Step 4 · Stay accountable</span><h3>Coaching & Brotherhood</h3><div class="price">NEXT LEVEL</div>
-          <p>Ongoing coaching, community accountability, and Mental Edge support for continued execution.</p>
+        <article class="offerCard" id="mind-over-muscle-program">
+          <span class="eyebrow">Step 3 · Execute</span>
+          <h3>Mind Over Muscle 8-Week Program</h3>
+          <div class="price">$27</div>
+          <p>Put the philosophy into action through an eight-week mindset and fitness system inside Mental Edge.</p>
+          <a class="btn primary" id="btnOfferProgram" href="#" data-event="mind_over_muscle_click">Join the 8-Week Program</a>
+        </article>
+        <article class="offerCard" id="custom-blueprint">
+          <span class="eyebrow">Step 4 · Personalize</span>
+          <h3>Custom Training Blueprint</h3>
+          <div class="price">$65</div>
+          <p>Receive a personalized four-week plan built around your goals, schedule, equipment, experience, and limitations.</p>
+          <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
+        </article>
+        <article class="offerCard" id="coaching-brotherhood">
+          <span class="eyebrow">Step 5 · Stay accountable</span>
+          <h3>Coaching & Brotherhood</h3>
+          <div class="price">NEXT LEVEL</div>
+          <p>Continue with coaching, community accountability, and Mental Edge support for long-term execution.</p>
           <a class="btn gold" href="mailto:joseph@vanderhallventuresllc.com?subject=Coaching%20and%20Brotherhood%20Interest" data-event="coaching_interest_click">Ask about coaching</a>
         </article>
       </div>
       <div class="trustStrip" aria-label="Service standards">
-        <span class="chip">Clear starting point</span><span class="chip">Scalable training</span>
-        <span class="chip">Accountability built in</span><span class="chip">Direct coach contact</span>
+        <span class="chip">Clear starting point</span><span class="chip">Progressive pathway</span>
+        <span class="chip">Scalable training</span><span class="chip">Accountability built in</span>
+        <span class="chip">Direct coach contact</span>
       </div>
     </section>
 
