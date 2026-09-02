@@ -10,6 +10,10 @@
   <meta property="og:title" content="Vanderhall Ventures LLC — Mental Edge | Mind Over Muscle" />
   <meta property="og:description" content="Mental Edge is the platform. Mind Over Muscle is the 8-week program inside it." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.vanderhallventuresllc.com/" />
+  <link rel="canonical" href="https://www.vanderhallventuresllc.com/" />
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     :root{
@@ -132,6 +136,17 @@
       color: var(--text);
     }
     .btn.small{padding:10px 12px; border-radius: 12px; font-size:13px}
+
+    .offerGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
+    .offerCard{display:flex;flex-direction:column;gap:10px;border:1px solid rgba(255,255,255,.11);background:rgba(14,14,20,.72);border-radius:var(--radius2);padding:16px}
+    .offerCard h3{margin:0;font-size:18px}.offerCard p{margin:0;color:var(--muted);line-height:1.6;flex:1}
+    .price{font-size:25px;font-weight:900;color:var(--gold)}
+    .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+    .notice{border-left:3px solid var(--gold);padding:10px 12px;background:rgba(212,175,55,.07);color:var(--muted);border-radius:0 12px 12px 0}
+    .trustStrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;color:var(--muted);font-size:13px}
+    @media (max-width:1100px){.offerGrid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:760px){.offerGrid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.offerGrid{grid-template-columns:1fr}}
 
     /* Hero */
     .hero{
@@ -476,6 +491,7 @@
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#how">How it works</a>
+        <a href="#offers">Offers</a>
         <a href="#program">Program</a>
         <a href="#proof2">Proof</a>
         <a href="#faq">FAQ</a>
@@ -507,7 +523,7 @@
           </p>
 
           <div class="ctaRow">
-            <a class="btn primary" id="btnJoinHero" href="#">Join Mind Over Muscle</a>
+            <a class="btn primary" id="btnStartReset" href="#free-reset">Start Free Reset</a>
             <a class="btn gold" id="btnOpenAppHero" href="#">Open Mental Edge</a>
             <a class="btn ghost" href="#program">See what you get</a>
           </div>
@@ -602,6 +618,53 @@
         </ul>
       </div>
     </section>
+    <section class="section" id="offers">
+      <h2>Your path forward</h2>
+      <p class="sub2">Start where you are. Move through five clear levels of education, structure, personalization, and accountability.</p>
+      <div class="offerGrid">
+        <article class="offerCard" id="free-reset">
+          <span class="eyebrow">Step 1 · Reset</span>
+          <h3>5-Day Discipline Reset</h3>
+          <div class="price">FREE</div>
+          <p>Rebuild consistency, daily structure, and forward momentum through five focused days of action.</p>
+          <span class="btn ghost" aria-disabled="true">Enrollment link coming soon</span>
+        </article>
+        <article class="offerCard" id="mind-over-muscle-ebook">
+          <span class="eyebrow">Step 2 · Learn</span>
+          <h3>Mind Over Muscle E-book</h3>
+          <div class="price">$15</div>
+          <p>Learn the core mindset, discipline, and personal-responsibility principles behind the Mental Edge philosophy.</p>
+          <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
+        </article>
+        <article class="offerCard" id="mind-over-muscle-program">
+          <span class="eyebrow">Step 3 · Execute</span>
+          <h3>Mind Over Muscle 8-Week Program</h3>
+          <div class="price">$27</div>
+          <p>Put the philosophy into action through an eight-week mindset and fitness system inside Mental Edge.</p>
+          <a class="btn primary" id="btnOfferProgram" href="#" data-event="mind_over_muscle_click">Join the 8-Week Program</a>
+        </article>
+        <article class="offerCard" id="custom-blueprint">
+          <span class="eyebrow">Step 4 · Personalize</span>
+          <h3>Custom Training Blueprint</h3>
+          <div class="price">$65</div>
+          <p>Receive a personalized four-week plan built around your goals, schedule, equipment, experience, and limitations.</p>
+          <span class="btn ghost" aria-disabled="true">Checkout link coming soon</span>
+        </article>
+        <article class="offerCard" id="coaching-brotherhood">
+          <span class="eyebrow">Step 5 · Stay accountable</span>
+          <h3>Coaching & Brotherhood</h3>
+          <div class="price">NEXT LEVEL</div>
+          <p>Continue with coaching, community accountability, and Mental Edge support for long-term execution.</p>
+          <a class="btn gold" href="mailto:joseph@vanderhallventuresllc.com?subject=Coaching%20and%20Brotherhood%20Interest" data-event="coaching_interest_click">Ask about coaching</a>
+        </article>
+      </div>
+      <div class="trustStrip" aria-label="Service standards">
+        <span class="chip">Clear starting point</span><span class="chip">Progressive pathway</span>
+        <span class="chip">Scalable training</span><span class="chip">Accountability built in</span>
+        <span class="chip">Direct coach contact</span>
+      </div>
+    </section>
+
 <section class="section" id="about">
   <h2>Meet Joseph Vanderhall</h2>
   <p class="sub2">Army Veteran | Behavioral Health Background | Certified Personal Trainer | Founder of Vanderhall Ventures LLC</p>
@@ -679,22 +742,10 @@
     </section>
 
     <section class="section" id="proof2">
-      <h2>Proof & credibility</h2>
-      <p class="sub2">Use this section to build trust without over-explaining.</p>
-
-      <div class="twoCol">
-        <div class="quote">
-          “I stopped relying on motivation and finally built structure I can keep.”
-          <small><b>— Mental Edge Member</b></small>
-        </div>
-        <div class="quote">
-          “The weekly standards made it easy to execute. No guessing.”
-          <small><b>— Mental Edge Member</b></small>
-        </div>
-      </div>
-
+      <h2>Verified client results</h2>
+      <p class="sub2">Real names, results, and quotes will appear here only after the client has approved public use.</p>
+      <div class="notice">Approved transformations are being prepared. No placeholder testimonials or unverified claims are displayed.</div>
       <div class="hr"></div>
-
       <div class="ctaRow">
         <a class="btn primary" id="btnJoinBottom" href="#">Join Mind Over Muscle</a>
         <a class="btn ghost" id="btnOpenAppBottom" href="#">Open Mental Edge</a>
@@ -756,6 +807,8 @@
         <a id="footerJoin" href="#">Join Mind Over Muscle</a>
         <a id="footerIG" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a id="footerEmail" href="#">Email</a>
+        <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+        <a href="refund-policy.html">Refunds</a><a href="training-disclaimer.html">Training Disclaimer</a>
       </div>
     </footer>
 
@@ -812,6 +865,7 @@
     link("btnJoinTop", joinUrl, true);
     link("btnJoinHero", joinUrl, true);
     link("btnJoinMid", joinUrl, true);
+    link("btnOfferProgram", joinUrl, true);
     link("btnJoinBottom", joinUrl, true);
     link("footerJoin", joinUrl, true);
 
@@ -839,6 +893,11 @@
       iframe.referrerPolicy = "strict-origin-when-cross-origin";
       videoBox.appendChild(iframe);
     }
+
+    // Conversion events (custom-event reporting requires a supported Vercel plan)
+    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click"};
+    Object.entries(eventMap).forEach(([id,name]) => { const el=document.getElementById(id); if(el) el.addEventListener("click",()=>window.va("event",{name})); });
+    document.querySelectorAll("[data-event]").forEach(el => el.addEventListener("click",()=>window.va("event",{name:el.dataset.event})));
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
