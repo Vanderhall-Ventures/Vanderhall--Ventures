@@ -374,6 +374,19 @@
       color: var(--muted);
     }
 
+    /* Live social proof */
+    .socialFeed{
+      margin-top:14px;
+      min-height:320px;
+      padding:14px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius2);
+      background:rgba(14,14,20,.72);
+      overflow:hidden;
+    }
+    .socialFeed .crt-logo{color:var(--muted);font-size:12px}
+    @media (max-width:560px){.socialFeed{padding:8px;min-height:240px}}
+
     /* Testimonials */
     .quote{
       border:1px solid rgba(255,255,255,.10);
@@ -499,6 +512,7 @@
         <a href="#offers">Offers</a>
         <a href="#program">Program</a>
         <a href="#proof2">Proof</a>
+        <a href="#live-feed">Live feed</a>
         <a href="#faq">FAQ</a>
         <a class="btn small ghost" id="btnOpenApp" href="#">Open App</a>
         <a class="btn small primary" id="btnJoinTop" href="#">Join Now</a>
@@ -757,6 +771,16 @@
       </div>
     </section>
 
+    <section class="section" id="live-feed">
+      <h2>Mental Edge in Action</h2>
+      <p class="sub2">Recent training, transformations, community moments, and discipline in motion from Vanderhall Ventures.</p>
+      <div class="socialFeed">
+        <div id="curator-feed-default-feed-layout">
+          <a href="https://curator.io" target="_blank" rel="noopener noreferrer" class="crt-logo crt-tag">Powered by Curator.io</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="community">
       <h2>Community & accountability</h2>
       <p class="sub2">A standards-driven environment built around consistent action and sustainable growth.</p>
@@ -823,6 +847,19 @@
     <span class="ok" aria-hidden="true"></span>
     <span><b>Copied:</b> link ready</span>
   </div>
+
+  <script>
+    /* curator-feed-default-feed-layout */
+    (function(){
+      var i,e,d=document,s="script";
+      i=d.createElement("script");
+      i.async=1;
+      i.charset="UTF-8";
+      i.src="https://cdn.curator.io/published/288b7bcd-1a31-4851-bafa-a4691dcafcce.js";
+      e=d.getElementsByTagName(s)[0];
+      e.parentNode.insertBefore(i,e);
+    })();
+  </script>
 
   <script>
     const C = window.VV_CONFIG;
