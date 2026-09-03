@@ -481,6 +481,7 @@
       customBlueprintUrl: "https://vanderhallventures.gumroad.com/l/Custom-Training-Blueprint-4week",
       instagramUrl: "https://instagram.com/vanderhall_ventures",
       instagramHandle: "@vanderhall_ventures",
+      facebookGroupUrl: "https://www.facebook.com/groups/989344113970716/",
       email: "joseph@vanderhallventuresllc.com",
 
       // Optional: Paste a YouTube embed URL like: https://www.youtube.com/embed/VIDEO_ID
@@ -788,6 +789,8 @@
         <div class="card">
           <h2>Mental Edge Brotherhood</h2>
           <p>Community support centered on discipline, accountability, fitness, and personal development.</p>
+          <div class="hr"></div>
+          <a class="btn gold" id="btnJoinFacebookGroup" href="#" data-event="facebook_group_click">Join the Mental Edge JBLM Community</a>
         </div>
         <div class="card">
           <h2>Vanderhall Ventures coaching</h2>
@@ -924,6 +927,7 @@
     link("footerOpenApp", appUrl, true);
 
     link("footerIG", C.instagramUrl, true);
+    link("btnJoinFacebookGroup", C.facebookGroupUrl, true);
 
     const email = document.getElementById("footerEmail");
     if (email) email.href = `mailto:${C.email}`;
@@ -944,7 +948,7 @@
     }
 
     // Conversion events (custom-event reporting requires a supported Vercel plan)
-    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnStartReset:"discipline_reset_click",btnOfferReset:"discipline_reset_click",btnOfferEbook:"ebook_click",btnOfferBlueprint:"custom_blueprint_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click"};
+    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnStartReset:"discipline_reset_click",btnOfferReset:"discipline_reset_click",btnOfferEbook:"ebook_click",btnOfferBlueprint:"custom_blueprint_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click",btnJoinFacebookGroup:"facebook_group_click"};
     Object.entries(eventMap).forEach(([id,name]) => { const el=document.getElementById(id); if(el) el.addEventListener("click",()=>window.va("event",{name})); });
     document.querySelectorAll("[data-event]").forEach(el => el.addEventListener("click",()=>window.va("event",{name:el.dataset.event})));
 
