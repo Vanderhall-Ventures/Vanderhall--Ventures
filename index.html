@@ -387,6 +387,18 @@
     .socialFeed .crt-logo{color:var(--muted);font-size:12px}
     @media (max-width:560px){.socialFeed{padding:8px;min-height:240px}}
 
+    /* Approved client proof */
+    .proofGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+    .proofCard{margin:0;border:1px solid rgba(255,255,255,.11);border-radius:var(--radius2);background:rgba(14,14,20,.72);overflow:hidden}
+    .proofCard img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#111}
+    .proofCard figcaption{padding:14px;color:var(--muted);line-height:1.6}
+    .proofCard figcaption strong{display:block;color:var(--text);margin-bottom:4px}
+    .reelGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+    .reelLink{display:flex;align-items:center;justify-content:center;min-height:58px;padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03);text-decoration:none;font-weight:800;text-align:center}
+    .reelLink:hover{border-color:var(--gold);color:var(--gold)}
+    @media (max-width:760px){.reelGrid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.proofGrid,.reelGrid{grid-template-columns:1fr}}
+
     /* Testimonials */
     .quote{
       border:1px solid rgba(255,255,255,.10);
@@ -763,8 +775,29 @@
 
     <section class="section" id="proof2">
       <h2>Verified client results</h2>
-      <p class="sub2">Real names, results, and quotes will appear here only after the client has approved public use.</p>
-      <div class="notice">Approved transformations are being prepared. No placeholder testimonials or unverified claims are displayed.</div>
+      <p class="sub2">Approved transformations and real training moments from the Vanderhall Ventures community.</p>
+      <div class="proofGrid">
+        <figure class="proofCard">
+          <img src="images/client-win-woman.png" alt="Approved Vanderhall Ventures client transformation" loading="lazy" />
+          <figcaption><strong>Client Win</strong>Eight weeks of discipline, renewed confidence, and independent training.</figcaption>
+        </figure>
+        <figure class="proofCard">
+          <img src="images/client-win-man.png" alt="Approved Vanderhall Ventures client transformation" loading="lazy" />
+          <figcaption><strong>Client Win</strong>Eight weeks of discipline, renewed confidence, and independent training.</figcaption>
+        </figure>
+      </div>
+      <div class="hr"></div>
+      <h3>Watch the work in motion</h3>
+      <div class="reelGrid">
+          <a class="reelLink" href="https://www.instagram.com/reel/DajUPqXvHgK/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 1</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DYQzCTLT6QM/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 2</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DUrrggWkfjq/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 3</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DPVBFprE1B1/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 4</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DN41F8FDkZP/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 5</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DUWk-JekuqH/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 6</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/DZ3GS3gy1iW/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 7</a>
+          <a class="reelLink" href="https://www.instagram.com/reel/Da6izvMzPyB/" target="_blank" rel="noopener noreferrer" data-event="proof_reel_click">Watch Client Reel 8</a>
+      </div>
       <div class="hr"></div>
       <div class="ctaRow">
         <a class="btn primary" id="btnJoinBottom" href="#">Join Mind Over Muscle</a>
