@@ -981,7 +981,7 @@
     }
 
     // Conversion events (custom-event reporting requires a supported Vercel plan)
-    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnOfferProgram:"mind_over_muscle_click",btnStartReset:"discipline_reset_click",btnOfferReset:"discipline_reset_click",btnOfferEbook:"ebook_click",btnOfferBlueprint:"custom_blueprint_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click",btnJoinFacebookGroup:"facebook_group_click"};
+    const eventMap = {btnJoinTop:"mind_over_muscle_click",btnJoinMid:"mind_over_muscle_click",btnJoinBottom:"mind_over_muscle_click",btnStartReset:"discipline_reset_click",btnOpenApp:"member_app_click",btnOpenAppHero:"member_app_click",btnOpenAppBottom:"member_app_click",footerOpenApp:"member_app_click"};
     Object.entries(eventMap).forEach(([id,name]) => { const el=document.getElementById(id); if(el) el.addEventListener("click",()=>window.va("event",{name})); });
     document.querySelectorAll("[data-event]").forEach(el => el.addEventListener("click",()=>window.va("event",{name:el.dataset.event})));
 
